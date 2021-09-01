@@ -128,6 +128,6 @@ function mouseDragged(){
   }
   function keyPressed(){
     if(keyCode === 32){
-        slingshot.attach(this.polygon);
+        slingshot.attach(this.rock);
     }
   }
