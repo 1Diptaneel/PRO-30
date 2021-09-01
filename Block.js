@@ -2,7 +2,7 @@ class Block{
     constructor(x, y, width, height) {
         var options = {
             restitution :0.4,
-            friction :0.001,
+            friction :0.3,
             isStatic : false
         }
         
@@ -11,6 +11,7 @@ class Block{
         this.height = height;
          this.image= loadImage("block.png")
         World.add(world, this.body);
+        this.Visiblity = 255;
       }
 
       display(){
@@ -31,15 +32,16 @@ class Block{
           push();
           
           //this.visiblity = 255;
-          //this.visiblity = this.visiblity - 5;
+          this.Visiblity = this.Visiblity - 5;
           //this.visiblity = this.x;
           //this.visiblity = this.body.position.x;
         
           
           
-          tint(255,this.visiblity);
+          tint(255,this.Visiblity);
           image(this.image, this.body.position.x, this.body.position.y,this.width, this.height);
           pop();
+
         }
 
 
